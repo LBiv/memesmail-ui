@@ -1,13 +1,62 @@
-<mm-userbar></mm-userbar>
-
-<mm-explorer></mm-explorer>
-
 <div>
-  <mm-headers>
-  </mm-headers>
+  <span>{{hc.displays.userName}}</span>
+
+  <md-menu
+    md-position-mode="target bottom"
+  >
+    <md-button
+      ng-click="hc.buttons.settingsMenu($mdOpenMenu, $event)"
+      class="md-primary"
+    >Settings
+    </md-button>
+
+    <md-menu-content width="4">
+      <md-menu-item>
+        <md-button
+        >Account
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item>
+        <md-button
+        >Keys
+        </md-button>
+      </md-menu-item>
+
+      <md-menu-item>
+        <md-button
+        >Contacts
+        </md-button>
+      </md-menu-item>
+    </md-menu-content>
+  </md-menu>
+
+  <md-button
+    ng-click="hc.buttons.refresh()"
+    class="md-raised"
+  >Refresh
+  </md-button>
+
+  <md-button
+    class="md-raised md-primary"
+  >Sign Out
+  </md-button>
 </div>
+<md-divider></md-divider>
 
 <div>
-  <mm-letter>
-  </mm-letter>
+  <mm-explorer>
+  </mm-explorer>
+
+  <div>
+    <div>
+      <mm-headers>
+      </mm-headers>
+    </div>
+
+    <div>
+      <mm-letter>
+      </mm-letter>
+    </div>
+  </div>
 </div>

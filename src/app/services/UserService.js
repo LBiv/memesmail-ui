@@ -7,10 +7,16 @@ angular
       // This service is for managing data immediately related to user identity.
       this.isSignedIn = isSignedIn;
 
+      this.getUserName = getUserName;
+
 
 
       function isSignedIn() {
-        return false;
+        return true;
+      }
+
+      function getUserName() {
+        return 'test@example.com';
       }
 
     });

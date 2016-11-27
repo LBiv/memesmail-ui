@@ -1,0 +1,15 @@
+<div>
+  <md-list
+    ng-cloak
+  >
+    <md-subheader>Message Headers</md-subheader>
+    
+    <md-list-item
+      ng-repeat="header in hdc.headers"
+      ng-click="hdc.selectFolder(parent.id)"
+    >
+      <p>{{header.title}} {{header.sender}}</p>
+      <md-divider></md-divider>
+    </md-list-item>
+  </md-list>
+</div>

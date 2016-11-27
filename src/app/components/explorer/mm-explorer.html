@@ -1,0 +1,30 @@
+<div>
+  <md-list
+    ng-cloak
+  >
+    <md-subheader>Your Data</md-subheader>
+
+    <md-list-item
+      ng-repeat="parent in exc.parentList"
+      ng-click="exc.selectFolder(parent.id)"
+    >
+      <md-icon
+        md-svg-icon="assets/images/open_folder.svg"
+      ></md-icon>
+
+      <p>{{parent.name}}</p>
+    </md-list-item>
+
+    <md-divider/>
+
+    <md-list-item
+      ng-repeat="child in exc.childList"
+      ng-click="exc.selectFolder(child.id)"
+    >
+      <md-icon
+        md-svg-icon="assets/images/closed_folder.svg"
+      ></md-icon>
+      <p>{{child.name}}</p>
+    </md-list-item>
+  </md-list>
+</div>
