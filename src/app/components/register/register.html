@@ -1,0 +1,46 @@
+<div align="center">
+  <div>
+    <md-input-container>
+      <label>Select Username</label>
+
+      <input
+        ng-model="rc.inputs.username"
+      />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <label>Select Password</label>
+
+      <input
+        ng-model="rc.inputs.passwordFirst"
+        type="password"
+      />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-input-container>
+      <label>Confirm Password</label>
+
+      <input
+        ng-model="rc.inputs.passwordSecond"
+        type="password"
+      />
+    </md-input-container>
+  </div>
+
+  <div>
+    <md-button
+      ng-click="rc.buttons.signIn()"
+    >Sign In
+    </md-button>
+
+    <md-button
+      ng-click="rc.buttons.register()"
+      class="md-raised"
+    >Register
+    </md-button>
+  </div>
+</div>
